@@ -74,16 +74,16 @@ If however, he there after is in a euphoric state because he find his wallet aga
 
 Do how do we match the answers to questions 2 and 3, the that Achim thinks he has of winning, with the chance that somebody else win (i.e. that he does not win). Let us write both odds as numbers:
 
-\[p = 0.02, 1-p = 0.95\]
-
-Where
-
-\[1-p=0.95 p=0.05\]
+\[p_1 = 0.02, 1-p_2 = 0.95 => p_2 = 0.05 \]
 
 Let us suppose that the estimate of pwas positive by one and that the estimate of 1-p was positive by 3then we know:
 
-\[2=0.05-0.02=0.03=0.015\]
+\[ 2\sigma = p_2 - p_1 = 0.05-0.02 = 0.03 => \sigma = 0.015\]
 
-Using =0.015we can then find the mean:
+Using this, we can then find the mean:
 
-\[\sigma=0.02-0.015=0.005\]
+\[ \sigma = 0.02 - 0.015 = 0.005 \]
+
+For something much more important
+--------------------------------------------------------
+[A video of a penguin being tickled](http://www.youtube.com/watch?v=FVwtTrlPSSk)
