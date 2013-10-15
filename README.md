@@ -1,4 +1,5 @@
 Distributions of Probabilistic Beliefs
 ========================================================
-Probabilistic Beliefs should be modeled as distributions, in order to account for changes and inconsistencies in these beliefs.
--------------------------------------------------------------------------------------------------------------------------------
+Modeling probabilistic beliefs as distributions, to incorporate changes and apparent inconsistencies.
+--------------------------------------------------------
+
