@@ -47,8 +47,8 @@ Achim act very much in accordance with our expectations, and gives us the follow
 1. 50
 2. 2% (has to be more than two)
 3. 19/20
-4.
-5. 
+4. 0
+5. 0
 6. 1/60
 
 Normally we would take either one of the responses, or such some other way to come to a point estimate, such as averaging. 
