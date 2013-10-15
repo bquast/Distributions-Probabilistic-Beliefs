@@ -84,6 +84,10 @@ Using this, we can then find the mean:
 
 \[ \sigma = 0.02 - 0.015 = 0.005 \]
 
-For something much more important
+An application
+--------------------------------------------------------
+Estimation of a 95% confidence interval for a belief on probability, how the lottery profit from this.
+
+Now...for something much more important
 --------------------------------------------------------
 [A video of a penguin being tickled](http://www.youtube.com/watch?v=FVwtTrlPSSk)
