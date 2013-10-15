@@ -1,10 +1,12 @@
-Distributions of Probabilistic Beliefs
+Single-Agent Belief Distributions
 ========================================================
 Modeling probabilistic beliefs for single agents as distributions, incorporating changes and apparent inconsistencies.
 --------------------------------------------------------
 
 Abstract
 --------------------------------------------------------
+This paper explains a method of incorporating conflicting beliefs for a single agent into a belief distribution.
+
 It is generally accepted that most if a not all people have conflicting beliefs. It is the basis of Socrates' midwife method, showing that two beliefs cannot be in accordance with each other. This incommensurability becomes especially apparent when we asks people about beliefs in probabilities, or, the odds of something occurring, and the odds of the same thing not occurring.
 
 More strongly, we often see that people have different beliefs about the same thing, often times just moments apart (e.g. beginning and end of a survey). There are many reasons for this, such as fatigue, hunger, anchoring, etc.
