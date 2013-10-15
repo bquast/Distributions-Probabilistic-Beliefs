@@ -1,6 +1,6 @@
 Distributions of Probabilistic Beliefs
 ========================================================
-Modeling probabilistic beliefs as distributions, incorporating changes and apparent inconsistencies.
+Modeling probabilistic beliefs for single agents as distributions, incorporating changes and apparent inconsistencies.
 --------------------------------------------------------
 
 Abstract
@@ -70,7 +70,7 @@ Let us now suppose that our subject loses his wallet before the winner is drawn.
 If however, he there after is in a euphoric state because he find his wallet again, and on top of this a shiny green apple, than his new belief might change to 3above his mean level. Which would give us:
 
 \[0.0167 + 3(0.00167)=0.0217\]
-\[P and (1-P)\]
+\[P anp (1-p)\]
 
 Do how do we match the answers to questions 2 and 3, the that Achim thinks he has of winning, with the chance that somebody else win (i.e. that he does not win). Let us write both odds as numbers:
 
@@ -87,6 +87,10 @@ Using this, we can then find the mean:
 An application
 --------------------------------------------------------
 Estimation of a 95% confidence interval for a belief on probability, how the lottery profit from this.
+
+```{r}
+1+1
+```
 
 Now...for something much more important
 --------------------------------------------------------
