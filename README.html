@@ -190,7 +190,7 @@ hljs.initHighlightingOnLoad();
 
 <p>This paper explains a method of incorporating conflicting beliefs for a single agent into a belief distribution.</p>
 
-<p>It is generally accepted that most if a not all people have conflicting beliefs. It is the basis of Socrates&#39; midwife method, showing that two beliefs cannot be in accordance with each other. This incommensurability becomes especially apparent when we asks people about beliefs in probabilities, or, the odds of something occurring, and the odds of the same thing not occurring.</p>
+<p><em>It is generally accepted that most if a not all people have conflicting beliefs. It is the basis of Socrates&#39; midwife method, showing that two beliefs cannot be in accordance with each other.</em> This incommensurability becomes especially apparent when we asks people about beliefs in probabilities, or, the odds of something occurring, and the odds of the same thing not occurring.</p>
 
 <p>More strongly, we often see that people have different beliefs about the same thing, often times just moments apart (e.g. beginning and end of a survey). There are many reasons for this, such as fatigue, hunger, anchoring, etc.</p>
 
@@ -200,7 +200,7 @@ hljs.initHighlightingOnLoad();
 
 <h2>An example</h2>
 
-<p>On a fair die, the chance of throwing 3 eyes is 16, call this p. The chance that you do not throw 3 eyes has therefore to be 1-p, or 1-16=56. This is a very simple statistical exercise, and most people will be able to give you the answer I derive. The reason for this is that most people have learned to use dice and how they operate, in e.g. board games. Likewise for coin flipping and many other basic statistical situations. In this context, you would rarely find people accepting a bet that has a negative expected value. Such as &hellip;</p>
+<p>On a fair die, the chance of throwing 3 eyes is 16, call this p. The chance that you do not throw 3 eyes has therefore to be <em>1-p</em>, or <em>1-1/6=5/6</em>. This is a very simple statistical exercise, and most people will be able to give you the answer I derive. The reason for this is that most people have learned to use dice and how they operate, in e.g. board games. Likewise for coin flipping and many other basic statistical situations. In this context, you would rarely find people accepting a bet that has a negative expected value. <em>Such as &hellip;</em></p>
 
 <p>However, as soon as odds become less obvious, statistics is not applied with the same rigor, and bets with negative expected values are often accepted. I would argue that this is a major factor (though not the only) at work when people buy lottery tickets for a lottery which usually has a negative expected value.</p>
 
@@ -219,11 +219,19 @@ hljs.initHighlightingOnLoad();
 
 <p>The answer to the first question is given. The second question is not very hard:</p>
 
-<p>\[ 1-\frac{5}{8}*100=\frac{1}{62.5}=\frac{2}{125} \]</p>
+<pre><code class="r">1/(100 * (5/8))
+</code></pre>
+
+<pre><code>## [1] 0.016
+</code></pre>
 
 <p>But perhaps it is something you wouldn&#39;t always do without a calculator or at least pen and paper. The third answer should be:</p>
 
-<p>\[ 1-\frac{2}{125}=\frac{123}{125} \]</p>
+<pre><code class="r">1 - 1/(100 * (5/8))
+</code></pre>
+
+<pre><code>## [1] 0.984
+</code></pre>
 
 <p>Definitely something most people would do on paper. However, since we are at the sports club, this is something we probably do not have at hand.</p>
 
@@ -246,20 +254,37 @@ hljs.initHighlightingOnLoad();
 
 <p>Let us assume that question 2 was answered in an slightly optimistic state, and question 6 in a slightly pessimistic state. Furthermore, let us assume that beliefs are normally distributed, and that these slightly pessimistic and slightly optimistic state are each away from the mean, below and above respectively. Lets express (6.) as a number: 0.0167. We can now construct the standard deviation.</p>
 
-<p>\[ 0.02 - 0.0167 = 0.0033 = 2\sigma => \sigma = 0.00167 \]</p>
+<pre><code class="r">(0.02 - 0.0167)/2
+</code></pre>
 
-<p>Our mean is therefore 0.0167+0.00167=0.01834. We can now define our subjects beliefs on winning the lottery as:</p>
+<pre><code>## [1] 0.00165
+</code></pre>
 
-<p>\[ B~N(0.0167,0.00167) \]</p>
+<p>Our mean is therefore <em>0.0167+0.00167=0.01834</em>. We can now define our subjects beliefs on winning the lottery as:</p>
+
+<blockquote>
+<p>B~N(0.0167,0.00167)</p>
+</blockquote>
 
 <p>Let us now suppose that our subject loses his wallet before the winner is drawn. If we want to predict how is beliefs have changed, we can for example assume that they are now 2below is mean belief. This would thus give us:</p>
 
-<p>\[ 0.0167-2(0.00167)=0.0134 \]</p>
+<pre><code class="r">0.0167 - 2 * (0.00167)
+</code></pre>
+
+<pre><code>## [1] 0.01336
+</code></pre>
 
 <p>If however, he there after is in a euphoric state because he find his wallet again, and on top of this a shiny green apple, than his new belief might change to 3above his mean level. Which would give us:</p>
 
-<p>\[ 0.0167 + 3(0.00167)=0.0217 \]
-\[ P anp (1-p) \]</p>
+<pre><code class="r">0.0167 + 3 * (0.00167)
+</code></pre>
+
+<pre><code>## [1] 0.02171
+</code></pre>
+
+<blockquote>
+<p>p anp (1-p)</p>
+</blockquote>
 
 <p>Do how do we match the answers to questions 2 and 3, the that Achim thinks he has of winning, with the chance that somebody else win (i.e. that he does not win). Let us write both odds as numbers:</p>
 
@@ -276,12 +301,6 @@ hljs.initHighlightingOnLoad();
 <h2>An application</h2>
 
 <p>Estimation of a 95% confidence interval for a belief on probability, how the lottery profit from this.</p>
-
-<pre><code class="r">1 + 1
-</code></pre>
-
-<pre><code>## [1] 2
-</code></pre>
 
 <h2>Now&hellip;for something much more important</h2>
 
