@@ -129,11 +129,11 @@ twosigma/2
 Using this, we can then find the mean:
 
 ```r
-0.02 - 0.015 = 0.005
+0.02 - 0.015
 ```
 
 ```
-## Error: target of assignment expands to non-language object
+## [1] 0.005
 ```
 
 An application

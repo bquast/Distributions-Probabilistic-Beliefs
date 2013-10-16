@@ -92,7 +92,7 @@ twosigma / 2
 
 Using this, we can then find the mean:
 ```{r}
-0.02 - 0.015 = 0.005
+0.02 - 0.015
 ```
 An application
 --------------------------------------------------------
