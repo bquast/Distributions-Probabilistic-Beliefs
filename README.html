@@ -173,10 +173,6 @@ hljs.initHighlightingOnLoad();
 </script>
 
 
-<!-- MathJax scripts -->
-<script type="text/javascript" src="https://c328740.ssl.cf1.rackcdn.com/mathjax/2.0-latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
-</script>
-
 
 
 </head>
@@ -286,17 +282,29 @@ hljs.initHighlightingOnLoad();
 <p>p anp (1-p)</p>
 </blockquote>
 
-<p>Do how do we match the answers to questions 2 and 3, the that Achim thinks he has of winning, with the chance that somebody else win (i.e. that he does not win). Let us write both odds as numbers:</p>
+<p>How do we match the answers to questions 2 and 3, the chance that Achim thinks he has of winning, with the chance that somebody else win (i.e. that he does not win). Let us write both odds as numbers:</p>
 
-<p>\[ p_1 = 0.02, 1-p_2 = 0.95 => p_2 = 0.05  \]</p>
+<blockquote>
+<p>p_1 = 0.02
+1-p_2 = 0.95 =&gt; p_2 = 0.05</p>
+</blockquote>
 
 <p>Let us suppose that the estimate of pwas positive by one and that the estimate of 1-p was positive by 3then we know:</p>
 
-<p>\[  2\sigma = p_2 - p_1 = 0.05-0.02 = 0.03 => \sigma = 0.015 \]</p>
+<pre><code class="r">twosigma = 0.05 - 0.02
+twosigma/2
+</code></pre>
+
+<pre><code>## [1] 0.015
+</code></pre>
 
 <p>Using this, we can then find the mean:</p>
 
-<p>\[  \sigma = 0.02 - 0.015 = 0.005  \]</p>
+<pre><code class="r">0.02 - 0.015 = 0.005
+</code></pre>
+
+<pre><code>## Error: target of assignment expands to non-language object
+</code></pre>
 
 <h2>An application</h2>
 
