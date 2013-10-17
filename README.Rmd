@@ -68,9 +68,11 @@ As a distribution
 Let us assume that question 2 was answered in an slightly optimistic state, and question 6 in a slightly pessimistic state. Furthermore, let us assume that beliefs are normally distributed, and that these slightly pessimistic and slightly optimistic state are each away from the mean, below and above respectively. Lets express (6.) as a number: 0.0167. We can now construct the standard deviation.
 
 ```{r}
-(0.02 - 0.0167)/2
+two_mu =(0.02 - 0.0167)/2
+mu = two_mu / 2
+mu
 ```
-Our mean is therefore *0.0167+0.00167=0.01834*. We can now define our subjects beliefs on winning the lottery as:
+We can now define our subjects beliefs on winning the lottery as:
 
 > B~N(0.0167,0.00167)
 
@@ -79,19 +81,21 @@ Let us now suppose that our subject loses his wallet before the winner is drawn.
 ```{r}
 0.0167 - 2 * (0.00167)
 ```
-If however, he there after is in a euphoric state because he find his wallet again, and on top of this a shiny green apple, than his new belief might change to 3above his mean level. Which would give us:
+
+If however, he there after is in a euphoric state because he find his wallet again, and on top of this a nice shiny green apple, than his new belief might change to *3s* above his mean level. Which would give us:
 
 ```{r}
 0.0167 + 3 * (0.00167)
 ```
+
 >p anp (1-p)
 
-How do we match the answers to questions 2 and 3, the chance that Achim thinks he has of winning, with the chance that somebody else win (i.e. that he does not win). Let us write both odds as numbers:
+How do we match the answers to questions (2) and (3), the chance that Achim thinks he has of winning, with the chance that somebody else win (i.e. that he does not win). Let us write both odds as numbers:
 
 > p_1 = 0.02
 > 1-p_2 = 0.95 => p_2 = 0.05
 
-Let us suppose that the estimate of *p* was positive by one and that the estimate of 1-p was positive by 3then we know:
+Let us suppose that the estimate of *p* was positive by one and that the estimate of *1-p* was positive by *3s* then we know:
 
 ```{r}
 twosigma = 0.05-0.02
@@ -99,13 +103,14 @@ twosigma / 2
 ```
 
 Using this, we can then find the mean:
+
 ```{r}
 0.02 - 0.015
 ```
+
 An application
 --------------------------------------------------------
 Estimation of a 95% confidence interval for a belief on probability, how the lottery profit from this.
-
 
 Now...for something much more important
 --------------------------------------------------------

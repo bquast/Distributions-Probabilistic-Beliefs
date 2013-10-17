@@ -87,14 +87,16 @@ Let us assume that question 2 was answered in an slightly optimistic state, and 
 
 
 ```r
-(0.02 - 0.0167)/2
+two_mu = (0.02 - 0.0167)/2
+mu = two_mu/2
+mu
 ```
 
 ```
-## [1] 0.00165
+## [1] 0.000825
 ```
 
-Our mean is therefore *0.0167+0.00167=0.01834*. We can now define our subjects beliefs on winning the lottery as:
+We can now define our subjects beliefs on winning the lottery as:
 
 > B~N(0.0167,0.00167)
 
@@ -109,7 +111,8 @@ Let us now suppose that our subject loses his wallet before the winner is drawn.
 ## [1] 0.01336
 ```
 
-If however, he there after is in a euphoric state because he find his wallet again, and on top of this a shiny green apple, than his new belief might change to 3above his mean level. Which would give us:
+
+If however, he there after is in a euphoric state because he find his wallet again, and on top of this a nice shiny green apple, than his new belief might change to *3s* above his mean level. Which would give us:
 
 
 ```r
@@ -120,14 +123,15 @@ If however, he there after is in a euphoric state because he find his wallet aga
 ## [1] 0.02171
 ```
 
+
 >p anp (1-p)
 
-How do we match the answers to questions 2 and 3, the chance that Achim thinks he has of winning, with the chance that somebody else win (i.e. that he does not win). Let us write both odds as numbers:
+How do we match the answers to questions (2) and (3), the chance that Achim thinks he has of winning, with the chance that somebody else win (i.e. that he does not win). Let us write both odds as numbers:
 
 > p_1 = 0.02
 > 1-p_2 = 0.95 => p_2 = 0.05
 
-Let us suppose that the estimate of *p* was positive by one and that the estimate of 1-p was positive by 3then we know:
+Let us suppose that the estimate of *p* was positive by one and that the estimate of *1-p* was positive by *3s* then we know:
 
 
 ```r
@@ -142,6 +146,7 @@ twosigma/2
 
 Using this, we can then find the mean:
 
+
 ```r
 0.02 - 0.015
 ```
@@ -150,10 +155,10 @@ Using this, we can then find the mean:
 ## [1] 0.005
 ```
 
+
 An application
 --------------------------------------------------------
 Estimation of a 95% confidence interval for a belief on probability, how the lottery profit from this.
-
 
 Now...for something much more important
 --------------------------------------------------------
