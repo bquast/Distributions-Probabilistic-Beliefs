@@ -5,9 +5,13 @@ Modeling probabilistic beliefs for single agents as distributions, incorporating
 
 Abstract
 --------------------------------------------------------
-By constructing a distribution of the belief structure of a single agent, we can migitage seeming incommensurability of beliefs. This paper proposes to generalise the concept of a single agents belief, from a point estimate to a distributional approximation. This allows us to deal with differing estimates of the probability *p*, as well as with estimates of *p* and *not p* not summing to unity. Additionaly with a distributional approximation, we can make rought predictions on agents beliefs, depending on the state they are in.
+By constructing a distribution of the belief structure of a single agent, we can mitigate seemingly incommensurabile beliefs. This paper proposes to generalise the concept of a single agents belief, from a point estimate to a distributional approximation.
 
-*It is generally accepted that most if a not all people have conflicting beliefs. It is the basis of Socrates' midwife method, showing that two beliefs cannot be in accordance with each other.* This incommensurability becomes especially apparent when we asks people about beliefs in probabilities, or, the odds of something occurring, and the odds of the same thing not occurring.
+This allows us to deal with differing estimates of the probability *p*, as well as with estimates of *p* and *not p* not summing to unity in meaningful way. Additionaly with a distributional approximation, we can estimate agents' beliefs, using the state they are in.
+
+Introduction
+--------------------------------------------------------
+This incommensurability becomes especially apparent when we asks people about beliefs in probabilities, or, the odds of something occurring, and the odds of the same thing not occurring.
 
 More strongly, we often see that people have different beliefs about the same thing, often times just moments apart (e.g. beginning and end of a survey). There are many reasons for this, such as fatigue, hunger, anchoring, etc.
 
