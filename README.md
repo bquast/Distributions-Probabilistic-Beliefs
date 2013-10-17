@@ -5,25 +5,35 @@ Modeling probabilistic beliefs for single agents as distributions, incorporating
 
 Abstract
 --------------------------------------------------------
-By constructing a distribution of the belief structure of a single agent, we can mitigate seemingly incommensurabile beliefs. This paper proposes to generalise the concept of a single agents belief, from a point estimate to a distributional approximation.
-
-This allows us to deal with differing estimates of the probability *p*, as well as with estimates of *p* and *not p* not summing to unity in meaningful way. Additionaly with a distributional approximation, we can estimate agents' beliefs, using the state they are in.
+By constructing a distribution of the belief structure of a single agent, we can mitigate seemingly incommensurabile beliefs. This paper proposes to generalise the concept of a single agents belief, from a point estimate to a distributional approximation. This will allow us to deal with differing estimates of the probability *p*, as well as with estimates of *p* and *not p* not summing to unity, in meaningful way. Additionaly with a distributional approximation, we can estimate agents' beliefs, using the state they are in.
 
 Introduction
 --------------------------------------------------------
-This incommensurability becomes especially apparent when we asks people about beliefs in probabilities, or, the odds of something occurring, and the odds of the same thing not occurring.
+*Introduce incommensurability as a concept*
 
-More strongly, we often see that people have different beliefs about the same thing, often times just moments apart (e.g. beginning and end of a survey). There are many reasons for this, such as fatigue, hunger, anchoring, etc.
+This incommensurability becomes especially apparent when we asks people about beliefs in probabilities, or, the odds of something occurring, and the odds of the same thing not occurring (i.e. *p* and *not p*).
 
-Thus, beliefs change, so we cannot discard a response because it does sum to unity with its negation. In this paper I try to describe how the idea of attempting to describe peoples beliefs in a point estimate (i.e. one number) is a problematic simplification, even in cases where we have no (knightian) uncertainty.
+More strongly, we often see that people have different beliefs about the same thing, often just moments apart (e.g. beginning and end of a survey). *There are many reasons for this, such as fatigue, hunger, anchoring, etc.*
 
-In this paper I try to show how we can use all the information that is provided to come up with an inclusive framework to model beliefs on probabilities using a distribution, rather than the traditional point estimate.
+Thus, beliefs change, so we cannot discard a response because it is different from a previous response, or because it does sum to unity with its negation. In this paper I describe how we can generalise the idea of perception of probability -for a single agent- from a point estimate, to a disributional approximation.
+
+Doing this will allow us to deal with seemingly inconsistent beliefs in a single framework in a *meaningful* way.
 
 An example
 --------------------------------------------------------
-On a fair die, the chance of throwing 3 eyes is 16, call this p. The chance that you do not throw 3 eyes has therefore to be *1-p*, or *1-1/6=5/6*. This is a very simple statistical exercise, and most people will be able to give you the answer I derive. The reason for this is that most people have learned to use dice and how they operate, in e.g. board games. Likewise for coin flipping and many other basic statistical situations. In this context, you would rarely find people accepting a bet that has a negative expected value. *Such as ...*
+On a fair die, the chance of throwing 3 eyes is 16, call this *p*. The chance that you do not throw 3 eyes (i.e. *not p*) has therefore to be *1-p*, or
 
-However, as soon as odds become less obvious, statistics is not applied with the same rigor, and bets with negative expected values are often accepted. I would argue that this is a major factor (though not the only) at work when people buy lottery tickets for a lottery which usually has a negative expected value.
+```r
+1 - (1/6)
+```
+
+```
+## [1] 0.8333
+```
+
+This is a very simple statistical exercise, and most people will be able to give you the answer that I derived. The reason for this is that people learn to use dice and how they operate, in e.g. board games. Likewise for coin flipping and many other basic statistical trials. In this context, you would rarely find people accepting a bet that has a negative expected value. Such as non-equal payout for a fair coin flip.
+
+However, as soon as odds become less transparent, statistical methods are often applied with less rigor. Especially when dealing with observed implicit payout structures. As a results bets with negative expected payouts, such as loteries, are often accepted. 
 
 Let us continue with the idea of a lottery. For a lottery at the local sports club, 100 tickets were printed, yet only 5 out of every 8 tickets was sold, therefore tickets will be drawn until a winner is found. The price of a ticket is 1 apple, and the prize for the winner is 50 apples.
 
