@@ -1,11 +1,11 @@
 Single-Agent Belief Distributions
 ========================================================
-Modeling probabilistic beliefs for single agents as distributions, incorporating changes and apparent inconsistencies.
+Modeling probabilistic beliefs for single agents as distributions, incorporating changes and apparent incommensurability.
 --------------------------------------------------------
 
 Abstract
 --------------------------------------------------------
-This paper explains a method of incorporating conflicting beliefs for a single agent into a belief distribution.
+By constructing a distribution of the belief structure of a single agent, we can migitage seeming incommensurability of beliefs. This paper proposes to generalise the concept of a single agents belief, from a point estimate to a distributional approximation. This allows us to deal with differing estimates of the probability *p*, as well as with estimates of *p* and *not p* not summing to unity. Additionaly with a distributional approximation, we can make rought predictions on agents beliefs, depending on the state they are in.
 
 *It is generally accepted that most if a not all people have conflicting beliefs. It is the basis of Socrates' midwife method, showing that two beliefs cannot be in accordance with each other.* This incommensurability becomes especially apparent when we asks people about beliefs in probabilities, or, the odds of something occurring, and the odds of the same thing not occurring.
 
