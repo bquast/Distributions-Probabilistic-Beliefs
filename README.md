@@ -9,11 +9,11 @@ By constructing a distribution of the belief structure of a single agent, we can
 
 Introduction
 --------------------------------------------------------
-*Introduce incommensurability as a concept*
+It generally held to be so that people hold beliefs that are incommensurably with each other. In other words, the knowledge base in interally inconsistent. This incommensurability becomes especially apparent when these beliefs are quantified. 
 
-This incommensurability becomes especially apparent when we asks people about beliefs in probabilities, or, the odds of something occurring, and the odds of the same thing not occurring (i.e. *p* and *not p*).
+As an example consider the following. If we have the probability of some event occur *p*, and all probabilities are exhausted at *1*, then the probability of that event not occuring is *1-p*. It is often observerd, that people hold beliefs that do not meet this condition, in other words, *not p* is unequal to *1-p*.
 
-More strongly, we often see that people have different beliefs about the same thing, often just moments apart (e.g. beginning and end of a survey). *There are many reasons for this, such as fatigue, hunger, anchoring, etc.*
+In addition to this, we often see that people have different beliefs about the same thing, often just moments apart (e.g. beginning and end of a survey). *There are many reasons for this, such as fatigue, hunger, anchoring, etc.*
 
 Thus, beliefs change, so we cannot discard a response because it is different from a previous response, or because it does sum to unity with its negation. In this paper I describe how we can generalise the idea of perception of probability -for a single agent- from a point estimate, to a distributional approximation.
 
@@ -37,7 +37,7 @@ However, as soon as odds become less transparent, statistical methods are often 
 
 Let us continue with the idea of a lottery. For a lottery at the local sports club, 100 tickets were printed, yet only 5 out of every 8 tickets was sold, therefore tickets will be drawn until a winner is found. The price of a ticket is 1 apple, and the prize for the winner is 50 apples.
 
-Our victim is called Achim. After Achim buys a ticket for the lottery, we ask him the following questions.
+Our victim is called Janus. After Janus buys a ticket for the lottery, we ask him the following questions.
 
   1. How many apples can you win in this lottery?
   2. What is the chance (in percent) that you will win the lottery?
@@ -70,7 +70,7 @@ Definitely something most people would do on paper. However, since we are at the
 
 As can be seen, question 2 and 6 are identical. If you go through the questions without having done the calculations beforehand, you will likely be inclined to give a lower answer to 6 than you were to 2. The reason is probably that the question directly preceding question 2, has a very positive content, it talks of the prize. Yet the question preceding question 6 is rather negative, since you would probably expect to walk away with zero apples. Furthermore, you could have become tired of answer so many questions, which generally diminishes your (perception) of your chance of being successful.
 
-Achim act very much in accordance with our expectations, and gives us the following responses.
+Janus act very much in accordance with our expectations, and gives us the following responses.
 
   1. 50
   2. 2% (has to be more than two)
@@ -112,7 +112,7 @@ Let us now suppose that our subject loses his wallet before the winner is drawn.
 ```
 
 
-If however, he there after is in a euphoric state because he find his wallet again, and on top of this a nice shiny green apple, than his new belief might change to *3s* above his mean level. Which would give us:
+If however, Janus there after is in a euphoric state because he find his wallet again, and on top of this a nice shiny green apple, than his new belief might change to *3s* above his mean level. Which would give us:
 
 
 ```r
