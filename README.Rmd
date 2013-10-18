@@ -5,19 +5,19 @@ Modelling probabilistic beliefs for single agents as distributions, incorporatin
 
 Abstract
 --------------------------------------------------------
-By constructing a distribution of the belief structure of a single agent, we can mitigate seemingly incommensurable beliefs. This paper proposes to generalise the concept of a single agents belief, from a point estimate to a distributional approximation. This will allow us to deal with differing estimates of the probability *p*, as well as with estimates of *p* and *not p* not summing to unity, in meaningful way. Additionally with a distributional approximation, we can estimate agents' beliefs, using the state they are in.
+By constructing a distribution of the belief structure of a single agent, we can mitigate seemingly incommensurable beliefs. This paper proposes to generalise the concept of a single agents belief, from a point estimate to a distributional approximation. This will allow us to deal with differing estimates of the probability *p*, as well as with estimates of *p* and *¬p* not summing to unity, in meaningful way. Additionally with a distributional approximation, we can estimate agents' beliefs, using the state they are in.
 
 Introduction
 --------------------------------------------------------
 It generally held to be so that people sometimes hold beliefs which are incommensurable with each other. In technical terms we could say, the knowledge base is interally inconsistent. This incommensurability becomes especially apparent when these beliefs are quantified. 
 
-As an example consider the following. If we have the probability of some event *e* occuring with probability *p*. As always, all probabilities are exhausted at *1*. Therefore the probability of that event not occuring (i.e. *not p*) is *1-p*.
+As an example consider the following. If we have the probability of some event *e* occuring with probability *p*. As always, all probabilities are exhausted at *1*. Therefore the probability of that event not occuring (i.e. *¬p* or *not p*) is *1-p*.
 
 > not p = 1 - p
 
 It is often observerd, that people hold beliefs that do not meet this condition.
 
-> not p != 1 - p
+> ¬p ≠ 1 - p
 
 In addition to this, we often see that people have different beliefs about the same thing, often just moments apart (e.g. beginning and end of a survey). This could be the case for many (unrelated) reasons, such as, fatigue, hunger, anchoring, etc.
 
@@ -27,7 +27,7 @@ Doing this will allow us to deal with seemingly inconsistent beliefs in a single
 
 An example
 --------------------------------------------------------
-On a fair die, the chance of throwing 3 eyes is 16, call this *p*. The chance that you do not throw 3 eyes (i.e. *not p*) is therefore *1-p*, or
+On a fair die, the chance of throwing 3 eyes is 16, call this *p*. The chance that you do not throw 3 eyes (i.e. *¬p*) is therefore *1-p*, or
 
 ```{r}
 1 - (1/6)
