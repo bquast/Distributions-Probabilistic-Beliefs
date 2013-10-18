@@ -188,19 +188,29 @@ hljs.initHighlightingOnLoad();
 
 <h2>Introduction</h2>
 
-<p>It generally held to be so that people hold beliefs that are incommensurably with each other. In other words, the knowledge base in interally inconsistent. This incommensurability becomes especially apparent when these beliefs are quantified. </p>
+<p>It generally held to be so that people sometimes hold beliefs which are incommensurable with each other. In technical terms we could say, the knowledge base is interally inconsistent. This incommensurability becomes especially apparent when these beliefs are quantified. </p>
 
-<p>As an example consider the following. If we have the probability of some event occur <em>p</em>, and all probabilities are exhausted at <em>1</em>, then the probability of that event not occuring is <em>1-p</em>. It is often observerd, that people hold beliefs that do not meet this condition, in other words, <em>not p</em> is unequal to <em>1-p</em>.</p>
+<p>As an example consider the following. If we have the probability of some event <em>e</em> occuring with probability <em>p</em>. As always, all probabilities are exhausted at <em>1</em>. Therefore the probability of that event not occuring (i.e. <em>not p</em>) is <em>1-p</em>.</p>
 
-<p>In addition to this, we often see that people have different beliefs about the same thing, often just moments apart (e.g. beginning and end of a survey). <em>There are many reasons for this, such as fatigue, hunger, anchoring, etc.</em></p>
+<blockquote>
+<p>not p = 1 - p</p>
+</blockquote>
 
-<p>Thus, beliefs change, so we cannot discard a response because it is different from a previous response, or because it does sum to unity with its negation. In this paper I describe how we can generalise the idea of perception of probability -for a single agent- from a point estimate, to a distributional approximation.</p>
+<p>It is often observerd, that people hold beliefs that do not meet this condition.</p>
+
+<blockquote>
+<p>not p != 1 - p</p>
+</blockquote>
+
+<p>In addition to this, we often see that people have different beliefs about the same thing, often just moments apart (e.g. beginning and end of a survey). This could be the case for many (unrelated) reasons, such as, fatigue, hunger, anchoring, etc.</p>
+
+<p><em>Thus, beliefs change, so we cannot discard a response because it is different from a previous response, or because it does sum to unity with its negation.</em> In this paper I describe how we can generalise the idea of perception of probability -for a single agent- from a point estimate, to a distributional approximation.</p>
 
 <p>Doing this will allow us to deal with seemingly inconsistent beliefs in a single framework in a <em>meaningful</em> way.</p>
 
 <h2>An example</h2>
 
-<p>On a fair die, the chance of throwing 3 eyes is 16, call this <em>p</em>. The chance that you do not throw 3 eyes (i.e. <em>not p</em>) has therefore to be <em>1-p</em>, or</p>
+<p>On a fair die, the chance of throwing 3 eyes is 16, call this <em>p</em>. The chance that you do not throw 3 eyes (i.e. <em>not p</em>) is therefore <em>1-p</em>, or</p>
 
 <pre><code class="r">1 - (1/6)
 </code></pre>
@@ -217,7 +227,6 @@ hljs.initHighlightingOnLoad();
 <p>Our victim is called Janus. After Janus buys a ticket for the lottery, we ask him the following questions.</p>
 
 <ol>
-<li>How many apples can you win in this lottery?</li>
 <li>What is the chance (in percent) that you will win the lottery?</li>
 <li>What is the chance (as a ratio) that someone else will win the lottery?</li>
 <li>What is the chance that nobody wins the lottery?</li>
@@ -225,7 +234,7 @@ hljs.initHighlightingOnLoad();
 <li>What is the chance (as a ratio) that you will win the lottery?</li>
 </ol>
 
-<p>The answer to the first question is given. The second question is not very hard:</p>
+<p>The first question is not very hard:</p>
 
 <pre><code class="r">1/(100 * (5/8))
 </code></pre>
@@ -233,7 +242,7 @@ hljs.initHighlightingOnLoad();
 <pre><code>## [1] 0.016
 </code></pre>
 
-<p>But perhaps it is something you wouldn&#39;t always do without a calculator or at least pen and paper. The third answer should be:</p>
+<p>But perhaps it is something you wouldn&#39;t always do without a calculator or at least pen and paper. The second probability is:</p>
 
 <pre><code class="r">1 - 1/(100 * (5/8))
 </code></pre>
@@ -241,14 +250,13 @@ hljs.initHighlightingOnLoad();
 <pre><code>## [1] 0.984
 </code></pre>
 
-<p>Definitely something most people would do on paper. However, since we are at the sports club, this is something we probably do not have at hand.</p>
+<p>Definitely something most people would do on paper. However, since we are at the sports club, this is something we might not have at hand.</p>
 
-<p>As can be seen, question 2 and 6 are identical. If you go through the questions without having done the calculations beforehand, you will likely be inclined to give a lower answer to 6 than you were to 2. The reason is probably that the question directly preceding question 2, has a very positive content, it talks of the prize. Yet the question preceding question 6 is rather negative, since you would probably expect to walk away with zero apples. Furthermore, you could have become tired of answer so many questions, which generally diminishes your (perception) of your chance of being successful.</p>
+<p>As can be seen, question (1) and (5) are identical. If you go through the questions without having done the calculations beforehand, you will likely be inclined to give a lower answer to (5) than you were to (1). <em>The reason is probably that the question directly preceding question (1), has a very positive content, it talks of the prize.</em> Yet the question preceding question (5) is rather negative, since you would probably expect to walk away with zero apples. Furthermore, you could have become tired of answer so many questions, which generally diminishes your (perception) of your chance of being successful.</p>
 
 <p>Janus act very much in accordance with our expectations, and gives us the following responses.</p>
 
 <ol>
-<li>50</li>
 <li>2% (has to be more than two)</li>
 <li>19/20</li>
 <li>0</li>
@@ -260,7 +268,7 @@ hljs.initHighlightingOnLoad();
 
 <h2>As a distribution</h2>
 
-<p>Let us assume that question 2 was answered in an slightly optimistic state, and question 6 in a slightly pessimistic state. Furthermore, let us assume that beliefs are normally distributed, and that these slightly pessimistic and slightly optimistic state are each away from the mean, below and above respectively. Lets express (6.) as a number: 0.0167. We can now construct the standard deviation.</p>
+<p>Let us assume that question (2) was answered in an slightly optimistic state, and question 6 in a slightly pessimistic state. Furthermore, let us assume that beliefs are normally distributed, and that these slightly pessimistic and slightly optimistic state are each away from the mean, below and above respectively. Lets express (5) as a number: 0.0167. We can now construct the standard deviation.</p>
 
 <pre><code class="r">two_mu = (0.02 - 0.0167)/2
 mu = two_mu/2

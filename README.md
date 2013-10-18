@@ -9,19 +9,26 @@ By constructing a distribution of the belief structure of a single agent, we can
 
 Introduction
 --------------------------------------------------------
-It generally held to be so that people hold beliefs that are incommensurably with each other. In other words, the knowledge base in interally inconsistent. This incommensurability becomes especially apparent when these beliefs are quantified. 
+It generally held to be so that people sometimes hold beliefs which are incommensurable with each other. In technical terms we could say, the knowledge base is interally inconsistent. This incommensurability becomes especially apparent when these beliefs are quantified. 
 
-As an example consider the following. If we have the probability of some event occur *p*, and all probabilities are exhausted at *1*, then the probability of that event not occuring is *1-p*. It is often observerd, that people hold beliefs that do not meet this condition, in other words, *not p* is unequal to *1-p*.
+As an example consider the following. If we have the probability of some event *e* occuring with probability *p*. As always, all probabilities are exhausted at *1*. Therefore the probability of that event not occuring (i.e. *not p*) is *1-p*.
 
-In addition to this, we often see that people have different beliefs about the same thing, often just moments apart (e.g. beginning and end of a survey). *There are many reasons for this, such as fatigue, hunger, anchoring, etc.*
+> not p = 1 - p
 
-Thus, beliefs change, so we cannot discard a response because it is different from a previous response, or because it does sum to unity with its negation. In this paper I describe how we can generalise the idea of perception of probability -for a single agent- from a point estimate, to a distributional approximation.
+It is often observerd, that people hold beliefs that do not meet this condition.
+
+> not p != 1 - p
+
+In addition to this, we often see that people have different beliefs about the same thing, often just moments apart (e.g. beginning and end of a survey). This could be the case for many (unrelated) reasons, such as, fatigue, hunger, anchoring, etc.
+
+*Thus, beliefs change, so we cannot discard a response because it is different from a previous response, or because it does sum to unity with its negation.* In this paper I describe how we can generalise the idea of perception of probability -for a single agent- from a point estimate, to a distributional approximation.
 
 Doing this will allow us to deal with seemingly inconsistent beliefs in a single framework in a *meaningful* way.
 
 An example
 --------------------------------------------------------
-On a fair die, the chance of throwing 3 eyes is 16, call this *p*. The chance that you do not throw 3 eyes (i.e. *not p*) has therefore to be *1-p*, or
+On a fair die, the chance of throwing 3 eyes is 16, call this *p*. The chance that you do not throw 3 eyes (i.e. *not p*) is therefore *1-p*, or
+
 
 ```r
 1 - (1/6)
@@ -31,6 +38,7 @@ On a fair die, the chance of throwing 3 eyes is 16, call this *p*. The chance th
 ## [1] 0.8333
 ```
 
+
 This is a very simple statistical exercise, and most people will be able to give you the answer that I derived. The reason for this is that people learn to use dice and how they operate, in e.g. board games. Likewise for coin flipping and many other basic statistical trials. In this context, you would rarely find people accepting a bet that has a negative expected value. Such as non-equal payout for a fair coin flip.
 
 However, as soon as odds become less transparent, statistical methods are often applied with less rigour. Especially when dealing with observed implicit payout structures. As a results bets with negative expected payouts, such as lotteries, are often accepted. 
@@ -39,14 +47,14 @@ Let us continue with the idea of a lottery. For a lottery at the local sports cl
 
 Our victim is called Janus. After Janus buys a ticket for the lottery, we ask him the following questions.
 
-  1. How many apples can you win in this lottery?
-  2. What is the chance (in percent) that you will win the lottery?
-  3. What is the chance (as a ratio) that someone else will win the lottery?
-  4. What is the chance that nobody wins the lottery?
-  5. You came with one apple, with how many apples do you expect to walked away?
-  6. What is the chance (as a ratio) that you will win the lottery?
+  1. What is the chance (in percent) that you will win the lottery?
+  2. What is the chance (as a ratio) that someone else will win the lottery?
+  3. What is the chance that nobody wins the lottery?
+  4. You came with one apple, with how many apples do you expect to walked away?
+  5. What is the chance (as a ratio) that you will win the lottery?
 
-The answer to the first question is given. The second question is not very hard:
+The first question is not very hard:
+
 
 ```r
 1/(100 * (5/8))
@@ -56,7 +64,9 @@ The answer to the first question is given. The second question is not very hard:
 ## [1] 0.016
 ```
 
-But perhaps it is something you wouldn't always do without a calculator or at least pen and paper. The third answer should be:
+
+But perhaps it is something you wouldn't always do without a calculator or at least pen and paper. The second probability is:
+
 
 ```r
 1 - 1/(100 * (5/8))
@@ -66,24 +76,24 @@ But perhaps it is something you wouldn't always do without a calculator or at le
 ## [1] 0.984
 ```
 
-Definitely something most people would do on paper. However, since we are at the sports club, this is something we probably do not have at hand.
 
-As can be seen, question 2 and 6 are identical. If you go through the questions without having done the calculations beforehand, you will likely be inclined to give a lower answer to 6 than you were to 2. The reason is probably that the question directly preceding question 2, has a very positive content, it talks of the prize. Yet the question preceding question 6 is rather negative, since you would probably expect to walk away with zero apples. Furthermore, you could have become tired of answer so many questions, which generally diminishes your (perception) of your chance of being successful.
+Definitely something most people would do on paper. However, since we are at the sports club, this is something we might not have at hand.
+
+As can be seen, question (1) and (5) are identical. If you go through the questions without having done the calculations beforehand, you will likely be inclined to give a lower answer to (5) than you were to (1). *The reason is probably that the question directly preceding question (1), has a very positive content, it talks of the prize.* Yet the question preceding question (5) is rather negative, since you would probably expect to walk away with zero apples. Furthermore, you could have become tired of answer so many questions, which generally diminishes your (perception) of your chance of being successful.
 
 Janus act very much in accordance with our expectations, and gives us the following responses.
 
-  1. 50
-  2. 2% (has to be more than two)
-  3. 19/20
+  1. 2% (has to be more than two)
+  2. 19/20
+  3. 0
   4. 0
-  5. 0
-  6. 1/60
+  5. 1/60
 
 Normally we would take either one of the responses, or such some other way to come to a point estimate, such as averaging. 
 
 As a distribution
 --------------------------------------------------------
-Let us assume that question 2 was answered in an slightly optimistic state, and question 6 in a slightly pessimistic state. Furthermore, let us assume that beliefs are normally distributed, and that these slightly pessimistic and slightly optimistic state are each away from the mean, below and above respectively. Lets express (6.) as a number: 0.0167. We can now construct the standard deviation.
+Let us assume that question (2) was answered in an slightly optimistic state, and question 6 in a slightly pessimistic state. Furthermore, let us assume that beliefs are normally distributed, and that these slightly pessimistic and slightly optimistic state are each away from the mean, below and above respectively. Lets express (5) as a number: 0.0167. We can now construct the standard deviation.
 
 
 ```r
