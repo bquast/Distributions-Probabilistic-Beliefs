@@ -139,7 +139,7 @@ If however, Janus there after is in a euphoric state because he find his wallet 
 How do we match the answers to questions (2) and (3), the chance that Achim thinks he has of winning, with the chance that somebody else win (i.e. that he does not win). Let us write both odds as numbers:
 
 > p_1 = 0.02
-> 1-p_2 = 0.95 => p_2 = 0.05
+> 1 - p_2 = 0.95 => p_2 = 0.05
 
 Let us suppose that the estimate of *p* was positive by one and that the estimate of *1-p* was positive by *3s* then we know:
 
