@@ -3,6 +3,11 @@ Single-Agent Belief Distributions
 Modelling probabilistic beliefs for single agents as distributions, incorporating changes and apparent incommensurability.
 --------------------------------------------------------
 
+TODO
+--------------------------------------------------------
+ [] implicit beliefs
+
+
 Abstract
 --------------------------------------------------------
 By constructing a distribution of the belief structure of a single agent, we can mitigate seemingly incommensurable beliefs. This paper proposes to generalise the concept of a single agents belief, from a point estimate to a distributional approximation. This will allow us to deal with differing estimates of the probability *p*, as well as with estimates of *p* and *¬p* not summing to unity, in meaningful way. Additionally with a distributional approximation, we can estimate agents' beliefs, using the state they are in.
@@ -11,17 +16,21 @@ Introduction
 --------------------------------------------------------
 It generally held to be so that people sometimes hold beliefs which are incommensurable with each other. In technical terms we could say, the knowledge base is interally inconsistent. This incommensurability becomes especially apparent when these beliefs are quantified. 
 
-As an example consider the following. If we have the probability of some event *e* occuring with probability *p*. As always, all probabilities are exhausted at *1*. Therefore the probability of that event not occuring (i.e. *¬p* or *not p*) is *1-p*.
+As an example consider the following. If we have the probability of some event *e* occuring with probability *p*. By definition, all probabilities are exhausted at *1*. Therefore the probability of that event not occuring (i.e. *¬p* or *not p*) is *1-p*.
 
-> not p = 1 - p
+> ¬p = 1 - p
 
-It is often observerd, that people hold beliefs that do not meet this condition.
+It is often observed, that people hold beliefs that do not meet this condition, these beliefs can thus be described as:
 
 > ¬p ≠ 1 - p
 
-In addition to this, we often see that people have different beliefs about the same thing, often just moments apart (e.g. beginning and end of a survey). This could be the case for many (unrelated) reasons, such as, fatigue, hunger, anchoring, etc.
+In addition to this, we often see that people have different beliefs about the same thing, often just moments apart (e.g. beginning and end of a survey). This could be the case for many (unrelated) reasons, such as, fatigue, hunger, anchoring, etc. We can express this as:
 
-*Thus, beliefs change, so we cannot discard a response because it is different from a previous response, or because it does sum to unity with its negation.* In this paper I describe how we can generalise the idea of perception of probability -for a single agent- from a point estimate, to a distributional approximation.
+> p_1(e) ≠ p_2(e) 
+
+We are thus faced with the fact that we get responses from agents 
+
+In this paper I describe how we can generalise the idea of perception of probability -for a single agent- from a point estimate, to a distributional approximation.
 
 Doing this will allow us to deal with seemingly inconsistent beliefs in a single framework in a *meaningful* way.
 
@@ -136,7 +145,7 @@ If however, Janus there after is in a euphoric state because he find his wallet 
 
 >p anp (1-p)
 
-How do we match the answers to questions (2) and (3), the chance that Achim thinks he has of winning, with the chance that somebody else win (i.e. that he does not win). Let us write both odds as numbers:
+How do we match the answers to questions (2) and (3), the chance that Janus thinks he has of winning, with the chance that somebody else win (i.e. that he does not win). Let us write both odds as numbers:
 
 > p_1 = 0.02
 > 1 - p_2 = 0.95 => p_2 = 0.05
