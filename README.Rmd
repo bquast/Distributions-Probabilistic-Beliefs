@@ -5,7 +5,7 @@ Modelling probabilistic beliefs for single agents as distributions, incorporatin
 
 TODO
 --------------------------------------------------------
- [] implicit beliefs
+- [ ] implicit beliefs
 
 
 Abstract
