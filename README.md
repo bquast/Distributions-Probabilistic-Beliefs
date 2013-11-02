@@ -3,11 +3,6 @@ Single-Agent Belief Distributions
 Modelling probabilistic beliefs for single agents as distributions, incorporating changes and apparent incommensurability.
 --------------------------------------------------------
 
-TODO
---------------------------------------------------------
-- [ ] implicit beliefs
-
-
 Abstract
 --------------------------------------------------------
 By constructing a distribution of the belief structure of a single agent, we can mitigate seemingly incommensurable beliefs. This paper proposes to generalise the concept of a single agents belief, from a point estimate to a distributional approximation. This will allow us to deal with differing estimates of the probability *p*, as well as with estimates of *p* and *¬p* not summing to unity, in meaningful way. Additionally with a distributional approximation, we can estimate agents' beliefs, using the state they are in.
