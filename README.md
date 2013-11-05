@@ -5,7 +5,7 @@ Modelling probabilistic beliefs for single agents as distributions, incorporatin
 
 Abstract
 --------------------------------------------------------
-By constructing a distribution of the belief structure of a single agent, we can mitigate seemingly incommensurable beliefs. This paper proposes to generalise the concept of a single agents belief, from a point estimate to a distributional approximation. This will allow us to deal with differing estimates of the probability *p*, as well as with estimates of *p* and *¬p* not summing to unity, in meaningful way. Additionally with a distributional approximation, we can estimate agents' beliefs, using the state they are in.
+By constructing a distribution of the belief structure of a single agent, we can mitigate seemingly incommensurable beliefs. This paper proposes to generalise the concept of a single agents beliefs, from a point estimate to a distributional approximation. This will allow us to deal with differing estimates of the probability *p*, as well as with estimates of *p* and *¬p* violating unitarity, in meaningful way. Additionally with a distributional approximation, we can estimate agents' beliefs, using the state which they are in.
 
 Introduction
 --------------------------------------------------------
@@ -85,7 +85,7 @@ Definitely something most people would do on paper. However, since we are at the
 
 As can be seen, question (1) and (5) are identical. If you go through the questions without having done the calculations beforehand, you will likely be inclined to give a lower answer to (5) than you were to (1). Presumable you would be quite neutral when answering question (1). Yet the question preceding question (5) is rather negative, since you would probably expect to walk away with zero apples, this would lead you to be in a more negative mood when answering (5). Furthermore, you could have become tired of answering so many questions, which generally diminishes your perception of your chance of being successful.
 
-Janus act very much in accordance with our expectations, and gives us the following responses.
+Janus acts very much in accordance with our expectations, and gives us the following responses.
 
   1. 2% (has to be more than two)
   2. 19/20
