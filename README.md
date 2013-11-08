@@ -136,10 +136,12 @@ We can now define our subjects beliefs on winning the lottery as:
 
 > B ~ N( mu, sigma )
 
-This 
+In this example we the shape of the distribution, as well as the location of our observations of this distributions.
+
+Normally in a situation where our distribution is positively skewed we would assume a different type of distribution, such as the log-normal, the exponential, or the Gumbel distribution. Additionaly if our mean does lie more to the center of the distribution we would probably expect to find high levels of kurtosis, in which case a t-distribution with a low number of degrees of freedom would be more fitting.
 
 
-Using the distribution to guess perceptions
+An application
 --------------------------------------------------------
 Let us now suppose that our subject loses his wallet before the winner is drawn. If we want to guess at how his beliefs have changed, we can for example assume that he is currently one standard deviation below his mean belief.
 
@@ -168,11 +170,6 @@ mu + 2 * sigma
 Equivalently, we can combine non-unitary responses using:
 
 > b_2[p(e)] = 1 - b_2[p(¬e)]
-
-
-An application
---------------------------------------------------------
-Estimation of a 95% confidence interval for a belief on probability, how the lottery profit from this.
 
 
 In conclusion
