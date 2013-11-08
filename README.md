@@ -140,6 +140,8 @@ In this example we assume the shape of the distribution, as well as the location
 
 In this case we assumed the normal distribution. Generally, in a situation where our distribution is positively skewed we would assume a different type of distribution, such as the log-normal, the exponential, or the Gumbel distribution. Additionaly, if our mean does lie more to the center of the distribution we would probably expect to find high levels of kurtosis, in which case a t-distribution with a low number of degrees of freedom would be more fitting.
 
+Provided we have a sufficient number of observations, we could use analytical distribution fitting. This would allow us to contruct a distribution using an approach which is much less based on assumptions regaring the shape of the distribution as well the location of the observations on the distribution.
+
 
 An application
 --------------------------------------------------------
