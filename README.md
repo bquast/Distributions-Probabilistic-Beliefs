@@ -46,15 +46,15 @@ On a fair die, the chance of throwing 3 eyes is 16, call this *p(e)*. The chance
 ```
 
 
-This is a very simple statistical exercise, and most people will be able to give you the answer that we derived. The reason for this is that people learn to use dice and how they operate, in e.g. board games. Idem dito for coin flipping and other basic statistical exercises. In this context, you would rarely find people accepting a bet that has a negative expected value, such as non-equal payout for a fair coin flip.
+This is a very simple statistical exercise, and most people will be able to give you the answer that we derive. The reason for this is that people learn to use dice and how they operate, in e.g. board games. Idem dito for coin flipping and other basic statistical exercises. In this context, you would rarely find people accepting a bet that has a negative expected value, such as non-equal payout for a fair coin flip.
 
 However, as soon as odds become less transparent, statistical methods are often applied with less rigour. Especially when dealing with observed implicit payout structures. As bets with negative expected value, such as lotteries, are often accepted (though there could be many other reasons for this too). 
 
 Let us continue with the idea of a lottery. For a lottery at the local sports club, 100 tickets were printed, yet only 5 out of every 8 tickets was sold, therefore tickets will be drawn until a winner is found. The price of a ticket is 1 apple, and the prize for the winner is 50 apples.
 
-Our subject is called Janus. After Janus buys a ticket for the lottery, we ask him the following questions.
+Our subject is called Janus. Janus know exactly how many tickets were available, and also how many were sold. After Janus buys a ticket for the lottery, we ask him the following questions.
 
-  1. What do you think is the chance (in percent) that you will win the lottery?
+  1. What do you think is the chance (as a percentage) that you will win the lottery?
   2. What do you think is the chance (as a ratio) that someone else will win the lottery?
   3. What is the chance that nobody wins the lottery?
   4. If you win, how many apples will you have won?
@@ -140,7 +140,7 @@ We can now define our subjects beliefs on winning the lottery as:
 
 Using the distribution to guess perceptions
 --------------------------------------------------------
-Let us now suppose that our subject loses his wallet before the winner is drawn. If we want to predict how is beliefs have changed, we can for example assume that they are now 2below is mean belief. This would thus give us:
+*Let us now suppose that our subject loses his wallet before the winner is drawn. If we want to predict how is beliefs have changed, we can for example assume that they are now below is mean belief. This would thus give us*:
 
 
 ```r
@@ -152,7 +152,7 @@ mu - sigma
 ```
 
 
-If however, Janus there after is in a euphoric state because he find his wallet again, and on top of this a nice shiny green apple, than his new belief might change to *3s* above his mean level. Which would give us:
+If however, Janus there after is in a euphoric state because he find his wallet again, and on top of this a nice shiny green apple, than his new belief might change to *2 sigma* above his mean level. Which would give us:
 
 
 ```r
