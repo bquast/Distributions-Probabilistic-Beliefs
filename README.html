@@ -184,22 +184,22 @@ hljs.initHighlightingOnLoad();
 
 <h2>Abstract</h2>
 
-<p>By constructing a distribution of the belief structure of a single agent, we can mitigate seemingly incommensurable beliefs. This paper proposes to generalise the concept of a single agents beliefs, from a point estimate to a distributional approximation. This will allow us to deal with differing estimates of the probability <em>p</em>, as well as with estimates of <em>p</em> and <em>¬p</em> violating unitarity, in meaningful way. Additionally with a distributional approximation, we can estimate agents&#39; beliefs, using the state which they are in.</p>
+<p>By constructing a distribution of the belief structure of a single agent, we can mitigate seemingly incommensurable beliefs. We propose to generalise the concept of a single agents beliefs, from a point estimate, to a distributional approximation. This will allow us to deal with differing estimates of the probability of an event <em>p(e)</em>, as well as with estimates of <em>p(e)</em> and <em>p(¬e)</em> which violate unitarity, in meaningful way. Additionally with a distributional approximation, we can guess at agents&#39; beliefs, depending on which state they are in.</p>
 
 <h2>Introduction</h2>
 
 <p>It generally held to be so that people sometimes hold beliefs which are incommensurable with each other. In technical terms we could say, the knowledge base is interally inconsistent. This incommensurability becomes especially apparent when these beliefs are quantified. </p>
 
-<p>As an example consider the following. If we have the probability of some event <em>e</em> occuring with probability <em>p</em>. By definition, all probabilities are exhausted at <em>1</em>. Therefore the probability of that event not occuring (i.e. <em>¬p</em> or <em>not p</em>) is <em>1-p</em>.</p>
+<p>As an example consider the following. If we have the probability of some event <em>e</em> occuring with probability <em>p(e)</em>. By definition, all probabilities are exhausted at <em>1</em>. Therefore the probability of that event not occuring, i.e. <em>p(¬e)</em> or <em>p of not e</em>, is <em>1-p(e)</em>.</p>
 
 <blockquote>
-<p>¬p = 1 - p</p>
+<p>p(¬e) = 1 - p(e)</p>
 </blockquote>
 
 <p>It is often observed, that people hold beliefs that do not meet this condition, these beliefs can thus be described as:</p>
 
 <blockquote>
-<p>¬p ≠ 1 - p</p>
+<p>p(¬e) ≠ 1 - p(e)</p>
 </blockquote>
 
 <p>In addition to this, we often see that people have different beliefs about the same thing, often just moments apart (e.g. beginning and end of a survey). This could be the case for many (unrelated) reasons, such as, fatigue, hunger, anchoring, etc. We can express this as:</p>
@@ -216,7 +216,7 @@ hljs.initHighlightingOnLoad();
 
 <h2>An example</h2>
 
-<p>On a fair die, the chance of throwing 3 eyes is 16, call this <em>p</em>. The chance that you do not throw 3 eyes (i.e. <em>¬p</em>) is therefore <em>1-p</em>, or</p>
+<p>On a fair die, the chance of throwing 3 eyes is 16, call this <em>p(e)</em>. The chance that you do not throw 3 eyes (i.e. <em>p(¬e)</em>) is therefore <em>1-p(e)</em>, or</p>
 
 <pre><code class="r">1 - (1/6)
 </code></pre>
