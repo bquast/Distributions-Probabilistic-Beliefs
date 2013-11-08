@@ -138,7 +138,7 @@ We can now define our subjects beliefs on winning the lottery as:
 
 In this example we assume the shape of the distribution, as well as the location of our observations on this distribution.
 
-Normally in a situation where our distribution is positively skewed we would assume a different type of distribution, such as the log-normal, the exponential, or the Gumbel distribution. Additionaly if our mean does lie more to the center of the distribution we would probably expect to find high levels of kurtosis, in which case a t-distribution with a low number of degrees of freedom would be more fitting.
+In this case we assumed the normal distribution. Generally, in a situation where our distribution is positively skewed we would assume a different type of distribution, such as the log-normal, the exponential, or the Gumbel distribution. Additionaly, if our mean does lie more to the center of the distribution we would probably expect to find high levels of kurtosis, in which case a t-distribution with a low number of degrees of freedom would be more fitting.
 
 
 An application
