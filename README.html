@@ -196,13 +196,13 @@ hljs.initHighlightingOnLoad();
 <p>p(¬e) = 1 - p(e)</p>
 </blockquote>
 
-<p>It is often observed, that people hold beliefs that do not meet this condition, these beliefs can thus be described as:</p>
+<p>It is often observed, that people hold beliefs that do not fullfil this condition, these beliefs can thus be described as:</p>
 
 <blockquote>
 <p>p(¬e) ≠ 1 - p(e)</p>
 </blockquote>
 
-<p>In addition to this, we often see that people have different beliefs about the same thing, often just moments apart (e.g. beginning and end of a survey). This could be the case for many (unrelated) reasons, such as, fatigue, hunger, anchoring, etc. We can express this as:</p>
+<p>In addition to this, we often see that people have different beliefs about the same probability, often just moments apart (e.g. beginning and end of a survey). This could be the case for many (unrelated) reasons, such as, fatigue, hunger, anchoring, etc. We can express this as:</p>
 
 <blockquote>
 <p>p_1(e) ≠ p_2(e) </p>
@@ -210,9 +210,9 @@ hljs.initHighlightingOnLoad();
 
 <p>We are thus faced with the fact that we get responses from agents </p>
 
-<p>In this paper I describe how we can generalise the idea of perception of probability -for a single agent- from a point estimate, to a distributional approximation.</p>
+<p>In this paper we describe how we can generalise the idea of perception of probability <em>for a single agent</em> from a point estimate, to a distributional approximation.</p>
 
-<p>Doing this will allow us to deal with seemingly inconsistent beliefs in a single framework in a <em>meaningful</em> way.</p>
+<p>Doing this will allow us to deal with non-unitary, or otherwise seemingly inconsistent beliefs in a single framework in a <em>meaningful</em> way.</p>
 
 <h2>An example</h2>
 
@@ -224,19 +224,19 @@ hljs.initHighlightingOnLoad();
 <pre><code>## [1] 0.8333
 </code></pre>
 
-<p>This is a very simple statistical exercise, and most people will be able to give you the answer that I derived. The reason for this is that people learn to use dice and how they operate, in e.g. board games. Likewise for coin flipping and many other basic statistical trials. In this context, you would rarely find people accepting a bet that has a negative expected value. Such as non-equal payout for a fair coin flip.</p>
+<p>This is a very simple statistical exercise, and most people will be able to give you the answer that we derived. The reason for this is that people learn to use dice and how they operate, in e.g. board games. Idem dito for coin flipping and other basic statistical exercises. In this context, you would rarely find people accepting a bet that has a negative expected value, such as non-equal payout for a fair coin flip.</p>
 
-<p>However, as soon as odds become less transparent, statistical methods are often applied with less rigour. Especially when dealing with observed implicit payout structures. As a results bets with negative expected payouts, such as lotteries, are often accepted. </p>
+<p>However, as soon as odds become less transparent, statistical methods are often applied with less rigour. Especially when dealing with observed implicit payout structures. As bets with negative expected value, such as lotteries, are often accepted (though there could be many other reasons for this too). </p>
 
 <p>Let us continue with the idea of a lottery. For a lottery at the local sports club, 100 tickets were printed, yet only 5 out of every 8 tickets was sold, therefore tickets will be drawn until a winner is found. The price of a ticket is 1 apple, and the prize for the winner is 50 apples.</p>
 
-<p>Our victim is called Janus. After Janus buys a ticket for the lottery, we ask him the following questions.</p>
+<p>Our subject is called Janus. After Janus buys a ticket for the lottery, we ask him the following questions.</p>
 
 <ol>
-<li>What is the chance (in percent) that you will win the lottery?</li>
-<li>What is the chance (as a ratio) that someone else will win the lottery?</li>
+<li>What do you think is the chance (in percent) that you will win the lottery?</li>
+<li>What do you think is the chance (as a ratio) that someone else will win the lottery?</li>
 <li>What is the chance that nobody wins the lottery?</li>
-<li>You came with one apple, with how many apples do you expect to walked away?</li>
+<li>If you win, how many apples will you have won?</li>
 <li>What is the chance (as a ratio) that you will win the lottery?</li>
 </ol>
 
@@ -248,90 +248,78 @@ hljs.initHighlightingOnLoad();
 <pre><code>## [1] 0.016
 </code></pre>
 
-<p>But perhaps it is something you wouldn&#39;t always do without a calculator or at least pen and paper. The second probability is:</p>
+<p>But perhaps it is something you wouldn&#39;t always do without a calculator or at least pen and paper. </p>
 
-<pre><code class="r">1 - 1/(100 * (5/8))
-</code></pre>
-
-<pre><code>## [1] 0.984
-</code></pre>
-
-<p>Definitely something most people would do on paper. However, since we are at the sports club, this is something we might not have at hand.</p>
-
-<p>As can be seen, question (1) and (5) are identical. If you go through the questions without having done the calculations beforehand, you will likely be inclined to give a lower answer to (5) than you were to (1). Presumable you would be quite neutral when answering question (1). Yet the question preceding question (5) is rather negative, since you would probably expect to walk away with zero apples, this would lead you to be in a more negative mood when answering (5). Furthermore, you could have become tired of answering so many questions, which generally diminishes your perception of your chance of being successful.</p>
+<p>As can be seen, question (1) and (5) are identical. If you go through the questions without having done the calculations beforehand, you will likely be inclined to give a lower answer to (5) than you were to (1). Presumably you would be quite neutral when answering question (1). Yet the question preceding question (5) is meant to lift you up by making you think of how much you could win.</p>
 
 <p>Janus acts very much in accordance with our expectations, and gives us the following responses.</p>
 
 <ol>
-<li>2% (has to be more than two)</li>
+<li>1%</li>
 <li>19/20</li>
 <li>0</li>
-<li>0</li>
+<li>50 - 1 = 49</li>
 <li>1/60</li>
 </ol>
+
+<p>We now observe two different estimates of the same <em>p(e)</em>.</p>
+
+<pre><code class="r">p_1 = 1/100
+p_1
+</code></pre>
+
+<pre><code>## [1] 0.01
+</code></pre>
+
+<pre><code class="r">p_2 = 1/60
+p_2
+</code></pre>
+
+<pre><code>## [1] 0.01667
+</code></pre>
 
 <p>Normally we would take either one of the responses, or such some other way to come to a point estimate, such as averaging. </p>
 
 <h2>As a distribution</h2>
 
-<p>Let us assume that question (2) was answered in an slightly optimistic state, and question 6 in a slightly pessimistic state. Furthermore, let us assume that beliefs are normally distributed, and that these slightly pessimistic and slightly optimistic state are each away from the mean, below and above respectively. Lets express (5) as a number: 0.0167. We can now construct the standard deviation.</p>
+<p>Let us assume that question (1) was answered in a neutral state, and that question (5) was answered in a slightly optimistic state. Furthermore, let us assume that beliefs are normally distributed.</p>
 
-<pre><code class="r">two_mu = (0.02 - 0.0167)/2
-mu = two_mu/2
+<pre><code class="r">mu = p_1
 mu
 </code></pre>
 
-<pre><code>## [1] 0.000825
+<pre><code>## [1] 0.01
+</code></pre>
+
+<pre><code class="r">sigma = p_2 - mu
+sigma
+</code></pre>
+
+<pre><code>## [1] 0.006667
 </code></pre>
 
 <p>We can now define our subjects beliefs on winning the lottery as:</p>
 
 <blockquote>
-<p>B~N(0.0167,0.00167)</p>
+<p>B ~ N( mu, sigma )</p>
 </blockquote>
+
+<h2>Using the distribution to guess perceptions</h2>
 
 <p>Let us now suppose that our subject loses his wallet before the winner is drawn. If we want to predict how is beliefs have changed, we can for example assume that they are now 2below is mean belief. This would thus give us:</p>
 
-<pre><code class="r">0.0167 - 2 * (0.00167)
+<pre><code class="r">mu - sigma
 </code></pre>
 
-<pre><code>## [1] 0.01336
+<pre><code>## [1] 0.003333
 </code></pre>
 
 <p>If however, Janus there after is in a euphoric state because he find his wallet again, and on top of this a nice shiny green apple, than his new belief might change to <em>3s</em> above his mean level. Which would give us:</p>
 
-<pre><code class="r">0.0167 + 3 * (0.00167)
+<pre><code class="r">mu + 2 * sigma
 </code></pre>
 
-<pre><code>## [1] 0.02171
-</code></pre>
-
-<blockquote>
-<p>p anp (1-p)</p>
-</blockquote>
-
-<p>How do we match the answers to questions (2) and (3), the chance that Janus thinks he has of winning, with the chance that somebody else win (i.e. that he does not win). Let us write both odds as numbers:</p>
-
-<blockquote>
-<p>p_1 = 0.02
-1 - p_2 = 0.95 =&gt; p_2 = 0.05</p>
-</blockquote>
-
-<p>Let us suppose that the estimate of <em>p</em> was positive by one and that the estimate of <em>1-p</em> was positive by <em>3s</em> then we know:</p>
-
-<pre><code class="r">twosigma = 0.05 - 0.02
-twosigma/2
-</code></pre>
-
-<pre><code>## [1] 0.015
-</code></pre>
-
-<p>Using this, we can then find the mean:</p>
-
-<pre><code class="r">0.02 - 0.015
-</code></pre>
-
-<pre><code>## [1] 0.005
+<pre><code>## [1] 0.02333
 </code></pre>
 
 <h2>An application</h2>
