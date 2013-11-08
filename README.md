@@ -142,7 +142,7 @@ We can now define our subjects beliefs on winning the lottery as:
 
 Using the distribution to guess perceptions
 --------------------------------------------------------
-*Let us now suppose that our subject loses his wallet before the winner is drawn. If we want to predict how is beliefs have changed, we can for example assume that they are now below is mean belief. This would thus give us*:
+Let us now suppose that our subject loses his wallet before the winner is drawn. If we want to guess at how his beliefs have changed, we can for example assume that he is currently one standard deviation below his mean belief.
 
 
 ```r
@@ -154,7 +154,7 @@ mu - sigma
 ```
 
 
-If however, Janus there after is in a euphoric state because he find his wallet again, and on top of this a nice shiny green apple, than his new belief might change to *2 sigma* above his mean level. Which would give us:
+If however, Janus there after is in a euphoric state because he find his wallet again, and on top of this a nice shiny green apple, than his new belief might change to two standard deviations above above his mean level.
 
 
 ```r
