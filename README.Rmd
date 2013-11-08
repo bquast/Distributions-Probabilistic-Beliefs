@@ -85,10 +85,7 @@ p_2
 
 Normally we would take either one of the responses, or such some other way to come to a point estimate, such as averaging. 
 
-
-As a distribution
---------------------------------------------------------
-Let us assume that question (1) was answered in a neutral state, and that question (5) was answered in a slightly optimistic state. Furthermore, let us assume that beliefs are normally distributed.
+An example of how to model this as a distribution could be the following. Let us assume that question (1) was answered in a neutral state, and that question (5) was answered in a slightly optimistic state. Furthermore, let us assume that beliefs are normally distributed.
 
 ```{r}
 mu = p_1
@@ -100,6 +97,8 @@ sigma
 We can now define our subjects beliefs on winning the lottery as:
 
 > B ~ N( mu, sigma )
+
+This 
 
 
 Using the distribution to guess perceptions
@@ -124,6 +123,13 @@ Equivalently, we can combine non-unitary responses using:
 An application
 --------------------------------------------------------
 Estimation of a 95% confidence interval for a belief on probability, how the lottery profit from this.
+
+
+In conclusion
+--------------------------------------------------------
+We propose to generalise the modeling a single agents' beliefs from a point-estimate to a distribution. This allows us to deal with seemingly incommensurable beliefs, such as non-unitarity) in a meaningful manner.
+
+By means of illustration, we provide an example in which we assume both the distribution, as well as the location of our observations on this distribution. However, other ways of constructing distributions, such as distribution fitting, can also be used.
 
 
 Now...for something much more important
