@@ -13,28 +13,26 @@ Introduction
 --------------------------------------------------------
 It generally held to be so that people sometimes hold beliefs which are incommensurable with each other. In technical terms we could say, the knowledge base is interally inconsistent. This incommensurability becomes especially apparent when these beliefs are quantified. 
 
-As an example consider the following. If we have the probability of some event *e* occuring with probability *p(e)*. By definition, all probabilities are exhausted at *1*. Therefore the probability of that event not occuring, i.e. *p(¬e)* or *p of not e*, is *1-p(e)*.
+As an example consider the following. If we have the probability of some event *e* occuring with probability *p(e)*, and an agents belief on this probability *b[p(e)]*. By definition, all probabilities are exhausted at *1*. Therefore the probability of that event not occuring, i.e. *p(¬e)* or *p of not e*, is *1-p(e)*.
 
 > p(¬e) = 1 - p(e)
 
 It is often observed, that people hold beliefs that do not fullfil this condition, these beliefs can thus be described as:
 
-> p(¬e) ≠ 1 - p(e)
+> b[p(¬e)] ≠ 1 - b[p(e)]
 
 In addition to this, we often see that people have different beliefs about the same probability, often just moments apart (e.g. beginning and end of a survey). This could be the case for many (unrelated) reasons, such as, fatigue, hunger, anchoring, etc. We can express this as:
 
-> p_1(e) ≠ p_2(e) 
-
-We are thus faced with the fact that we get responses from agents 
+> b_1[p(e)] ≠ b_2[p(e)] 
 
 In this paper we describe how we can generalise the idea of perception of probability *for a single agent* from a point estimate, to a distributional approximation.
 
-Doing this will allow us to deal with non-unitary, or otherwise seemingly inconsistent beliefs in a single framework in a *meaningful* way.
+Doing this will allow us to deal with non-unitary, or otherwise seemingly inconsistent beliefs, in a single framework in a *meaningful* way.
 
 
 An example
 --------------------------------------------------------
-On a fair die, the chance of throwing 3 eyes is 16, call this *p(e)*. The chance that you do not throw 3 eyes (i.e. *p(¬e)*) is therefore *1-p(e)*, or
+On a fair die, the chance of throwing 3 eyes is 1/6, call this *p(e)*. The chance that you do not throw 3 eyes (i.e. *p(¬e)*) is therefore *1-p(e)*, or
 
 
 ```r
@@ -46,11 +44,15 @@ On a fair die, the chance of throwing 3 eyes is 16, call this *p(e)*. The chance
 ```
 
 
-This is a very simple statistical exercise, and most people will be able to give you the answer that we derive. The reason for this is that people learn to use dice and how they operate, in e.g. board games. Idem dito for coin flipping and other basic statistical exercises. In this context, you would rarely find people accepting a bet that has a negative expected value, such as non-equal payout for a fair coin flip.
+This is a very simple statistical exercise, and most people will be able to give you the answer that we derive. The following thus holds:
+
+> b[p(¬e)] = 1 - b[p(e)]
+
+The reason for this is that people learn to use dice and how they operate, in e.g. board games. Idem dito for coin flipping and other basic statistical exercises. In this context, you would rarely find people accepting a bet that has a negative expected value, such as non-equal payout for a fair coin flip.
 
 However, as soon as odds become less transparent, statistical methods are often applied with less rigour. Especially when dealing with observed implicit payout structures. As bets with negative expected value, such as lotteries, are often accepted (though there could be many other reasons for this too). 
 
-Let us continue with the idea of a lottery. For a lottery at the local sports club, 100 tickets were printed, yet only 5 out of every 8 tickets was sold, therefore tickets will be drawn until a winner is found. The price of a ticket is 1 apple, and the prize for the winner is 50 apples.
+Let us continue with the idea of a lottery. For a lottery at the local sports club, 100 tickets were printed, yet only 3 out of every 4 tickets was sold, therefore tickets will be drawn until a winner is found. The price of a ticket is 1 apple, and the prize for the winner is 50 apples.
 
 Our subject is called Janus. Janus know exactly how many tickets were available, and also how many were sold. After Janus buys a ticket for the lottery, we ask him the following questions.
 
@@ -164,10 +166,15 @@ mu + 2 * sigma
 ```
 
 
+Equivalently, we can combine non-unitary responses using:
+
+> b_2[p(e)] = 1 - b_2[p(¬e)]
+
 
 An application
 --------------------------------------------------------
 Estimation of a 95% confidence interval for a belief on probability, how the lottery profit from this.
+
 
 Now...for something much more important
 --------------------------------------------------------

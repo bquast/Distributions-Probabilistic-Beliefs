@@ -190,7 +190,7 @@ hljs.initHighlightingOnLoad();
 
 <p>It generally held to be so that people sometimes hold beliefs which are incommensurable with each other. In technical terms we could say, the knowledge base is interally inconsistent. This incommensurability becomes especially apparent when these beliefs are quantified. </p>
 
-<p>As an example consider the following. If we have the probability of some event <em>e</em> occuring with probability <em>p(e)</em>. By definition, all probabilities are exhausted at <em>1</em>. Therefore the probability of that event not occuring, i.e. <em>p(¬e)</em> or <em>p of not e</em>, is <em>1-p(e)</em>.</p>
+<p>As an example consider the following. If we have the probability of some event <em>e</em> occuring with probability <em>p(e)</em>, and an agents belief on this probability <em>b[p(e)]</em>. By definition, all probabilities are exhausted at <em>1</em>. Therefore the probability of that event not occuring, i.e. <em>p(¬e)</em> or <em>p of not e</em>, is <em>1-p(e)</em>.</p>
 
 <blockquote>
 <p>p(¬e) = 1 - p(e)</p>
@@ -199,24 +199,22 @@ hljs.initHighlightingOnLoad();
 <p>It is often observed, that people hold beliefs that do not fullfil this condition, these beliefs can thus be described as:</p>
 
 <blockquote>
-<p>p(¬e) ≠ 1 - p(e)</p>
+<p>b[p(¬e)] ≠ 1 - b[p(e)]</p>
 </blockquote>
 
 <p>In addition to this, we often see that people have different beliefs about the same probability, often just moments apart (e.g. beginning and end of a survey). This could be the case for many (unrelated) reasons, such as, fatigue, hunger, anchoring, etc. We can express this as:</p>
 
 <blockquote>
-<p>p_1(e) ≠ p_2(e) </p>
+<p>b_1[p(e)] ≠ b_2[p(e)] </p>
 </blockquote>
-
-<p>We are thus faced with the fact that we get responses from agents </p>
 
 <p>In this paper we describe how we can generalise the idea of perception of probability <em>for a single agent</em> from a point estimate, to a distributional approximation.</p>
 
-<p>Doing this will allow us to deal with non-unitary, or otherwise seemingly inconsistent beliefs in a single framework in a <em>meaningful</em> way.</p>
+<p>Doing this will allow us to deal with non-unitary, or otherwise seemingly inconsistent beliefs, in a single framework in a <em>meaningful</em> way.</p>
 
 <h2>An example</h2>
 
-<p>On a fair die, the chance of throwing 3 eyes is 16, call this <em>p(e)</em>. The chance that you do not throw 3 eyes (i.e. <em>p(¬e)</em>) is therefore <em>1-p(e)</em>, or</p>
+<p>On a fair die, the chance of throwing 3 eyes is 1/6, call this <em>p(e)</em>. The chance that you do not throw 3 eyes (i.e. <em>p(¬e)</em>) is therefore <em>1-p(e)</em>, or</p>
 
 <pre><code class="r">1 - (1/6)
 </code></pre>
@@ -224,11 +222,17 @@ hljs.initHighlightingOnLoad();
 <pre><code>## [1] 0.8333
 </code></pre>
 
-<p>This is a very simple statistical exercise, and most people will be able to give you the answer that we derive. The reason for this is that people learn to use dice and how they operate, in e.g. board games. Idem dito for coin flipping and other basic statistical exercises. In this context, you would rarely find people accepting a bet that has a negative expected value, such as non-equal payout for a fair coin flip.</p>
+<p>This is a very simple statistical exercise, and most people will be able to give you the answer that we derive. The following thus holds:</p>
+
+<blockquote>
+<p>b[p(¬e)] = 1 - b[p(e)]</p>
+</blockquote>
+
+<p>The reason for this is that people learn to use dice and how they operate, in e.g. board games. Idem dito for coin flipping and other basic statistical exercises. In this context, you would rarely find people accepting a bet that has a negative expected value, such as non-equal payout for a fair coin flip.</p>
 
 <p>However, as soon as odds become less transparent, statistical methods are often applied with less rigour. Especially when dealing with observed implicit payout structures. As bets with negative expected value, such as lotteries, are often accepted (though there could be many other reasons for this too). </p>
 
-<p>Let us continue with the idea of a lottery. For a lottery at the local sports club, 100 tickets were printed, yet only 5 out of every 8 tickets was sold, therefore tickets will be drawn until a winner is found. The price of a ticket is 1 apple, and the prize for the winner is 50 apples.</p>
+<p>Let us continue with the idea of a lottery. For a lottery at the local sports club, 100 tickets were printed, yet only 3 out of every 4 tickets was sold, therefore tickets will be drawn until a winner is found. The price of a ticket is 1 apple, and the prize for the winner is 50 apples.</p>
 
 <p>Our subject is called Janus. Janus know exactly how many tickets were available, and also how many were sold. After Janus buys a ticket for the lottery, we ask him the following questions.</p>
 
@@ -321,6 +325,12 @@ sigma
 
 <pre><code>## [1] 0.02333
 </code></pre>
+
+<p>Equivalently, we can combine non-unitary responses using:</p>
+
+<blockquote>
+<p>b_2[p(e)] = 1 - b_2[p(¬e)]</p>
+</blockquote>
 
 <h2>An application</h2>
 
